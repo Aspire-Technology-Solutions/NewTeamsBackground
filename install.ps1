@@ -23,12 +23,12 @@
 	if (!(Test-Path "$env:windir\Temp\Logs\"))
 	{
 	   mkdir $env:windir\Temp\Logs
-	   LogWrite "$(Get-TimeStamp): AlwaysOn VPN script has started."
+	   LogWrite "$(Get-TimeStamp): New teams background script has started."
 	   LogWrite "$(Get-TimeStamp): Log directory created."
 	}
 	else
 	{
-		LogWrite "$(Get-TimeStamp): AlwaysOn VPN script has started."
+		LogWrite "$(Get-TimeStamp): New teams background script script has started."
 		LogWrite "$(Get-TimeStamp): Log directory exists."
 	}
 
@@ -37,6 +37,7 @@ If ($Mode -eq "Install") {
 LogWrite "$(Get-TimeStamp): Teams Image file is copying."
 copy ".\data\Teams Background.png" "$env:LOCALAPPDATA\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads\TeamsBackground.png" -Force
 LogWrite "$(Get-TimeStamp): Teams Image file has copied."
+LogWrite "$(Get-TimeStamp): New teams background app exiting."
 Exit
 }
 
@@ -44,5 +45,6 @@ If ($Mode -eq "Uninstall") {
 LogWrite "$(Get-TimeStamp): Teams Image file is deleting."
 del "$env:LOCALAPPDATA\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads\TeamsBackground.png"  -Force
 LogWrite "$(Get-TimeStamp): Teams Image file has been deleted."
+LogWrite "$(Get-TimeStamp): New teams background app exiting."
 Exit
 }
