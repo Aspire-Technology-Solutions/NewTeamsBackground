@@ -12,7 +12,8 @@ The drawback to using a script, is:
 - the offer no verison controlling,
 - the images have to be saved in a shared location, often Azure files leading to costs,
 - As the script runs once, and often results in a copy to the local drive; simply updating the image isn't enough and the script needs rerun,
-- or you could use remote load, but loss of internet connectivty conuld impact this.
+- or you could use remote load, but loss of internet connectivty conuld impact this,
+- MS may change the upload folder location, and a script limits our abiliity to move this with ease while a Win32 app allows verison change.
 
 The benefits to use a Win32 App, is that it addresses the above chllanges and offers greater control around delivery. 
 
@@ -67,3 +68,4 @@ The benefits to use a Win32 App, is that it addresses the above chllanges and of
 
 ## Consideration
 As a consideration for delivery, you could set New Teams (if deployed via Intune) as a dependant applicaiton, meaning this app will only attempt delivery after it has been installed; ensuring no app install failures during Autopilot/in general. We would recommend this step, for smoother deliveries.
+Should the upload folder change directories in the future, the scropt may need amending to reflect this location.
