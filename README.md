@@ -27,7 +27,7 @@ The benefits to use a Win32 App, is that it addresses the above chllanges and of
 
 1. Extract the powershell script and assests folder for the background app to the C:\TeamsBackgroundApp\
 2. Open the Assets folder,
-3. Replace the current Teams Background image with your preferred image (retaining the name) with your coporate background using the .jpg format as well the same names,
+3. Replace the current Teams Background image with your preferred image (retaining the name) with your coporate background using the .png format as well the same names, including the thumb file too,
 4. Package the application via the Microsoft Win32 Content Prep from https://go.microsoft.com/fwlink/?linkid=2065730
 5. Extract the Microsoft Win32 Content Prep tool,
 6. Open CMD using Administrator elevation
